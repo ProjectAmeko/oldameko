@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -12,15 +12,15 @@ using Ameko.Models;
 using DynamicData;
 using ReactiveUI;
 
-namespace Ameko.ViewModels
-{
-    public class MainWindowViewModel : ViewModelBase
-    {
-        public MainWindowViewModel()
-        {
-            EventGridVM = new EventGridViewModel();
-        }
+namespace Ameko.ViewModels;
 
-        private EventGridViewModel EventGridVM { get; set; }
+public class EventGridViewModel : ViewModelBase
+{
+    private EventGridItem? _currentEvent;
+
+    public EventGridItem? CurrentEvent
+    {
+        get => _currentEvent;
+        set => this.RaiseAndSetIfChanged(ref _currentEvent, value);
     }
 }

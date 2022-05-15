@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Ameko.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Ameko.Views.EventGrid">
+    
+    <Design.DataContext>
+        <vm:EventGridViewModel/>
+    </Design.DataContext>
+    
+    <DockPanel>
+        <TextBox DockPanel.Dock="Top" Text="{Binding CurrentEvent.Text, FallbackValue=''}" Height="80"></TextBox>
+        <DataGrid Name="SubGrid"
+                  DockPanel.Dock="Bottom"
+                  CanUserResizeColumns="True"
+                  CanUserReorderColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Extended"
+                  FontSize="12"
+                  SelectedItem="{Binding CurrentEvent}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="#" Binding="{Binding Index}" Width="0.25*" />
+                <DataGridTextColumn Header="Layer" Binding="{Binding Layer}" Width="0.35*" />
+                <DataGridTextColumn Header="Start" Binding="{Binding Start}" Width="0.5*" />
+                <DataGridTextColumn Header="End" Binding="{Binding End}" Width="0.5*" />
+                <DataGridTextColumn Header="Style" Binding="{Binding Style}" Width="0.5*" />
+                <DataGridTextColumn Header="Actor" Binding="{Binding Actor}" Width="0.5*" />
+                <DataGridTextColumn Header="Effect" Binding="{Binding Effect}" Width="0.5*" />
+                <DataGridTextColumn Header="Text" Binding="{Binding Text}" Width="4*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+    
+</UserControl>

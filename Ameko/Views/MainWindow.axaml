@@ -3,7 +3,7 @@
         xmlns:vm="using:Ameko.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Ameko.Views"
+        xmlns:views="clr-namespace:Ameko.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Ameko.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
@@ -29,25 +29,7 @@
         </ExperimentalAcrylicBorder>
         
         <DockPanel Margin="40">
-            <TextBox DockPanel.Dock="Top" Text="{Binding CurrentLine, FallbackValue=''}" Height="80"></TextBox>
-            <DataGrid DockPanel.Dock="Bottom" 
-                      Items="{Binding Events}"
-                      CanUserResizeColumns="True"
-                      CanUserReorderColumns="False"
-                      IsReadOnly="True"
-                      SelectionMode="Extended"
-                      FontSize="12"
-                      SelectedItem="{Binding CurrentEvent}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Layer" Binding="{Binding Layer}" Width="0.25*" />
-                    <DataGridTextColumn Header="Start" Binding="{Binding Start}" Width="0.5*" />
-                    <DataGridTextColumn Header="End" Binding="{Binding End}" Width="0.5*" />
-                    <DataGridTextColumn Header="Style" Binding="{Binding Style}" Width="0.5*" />
-                    <DataGridTextColumn Header="Actor" Binding="{Binding Actor}" Width="0.5*" />
-                    <DataGridTextColumn Header="Effect" Binding="{Binding Effect}" Width="0.5*" />
-                    <DataGridTextColumn Header="Text" Binding="{Binding Text}" Width="4*" />
-                </DataGrid.Columns>
-            </DataGrid>
+            <views:EventGrid DataContext="{Binding EventGridVM}" />
         </DockPanel>
         
     </Panel>
