@@ -55,6 +55,28 @@ public class AssEvent
             Text = string.Join(',', tokens, 9, tokens.Length - 9)
         };
     }
+
+    /// <summary>
+    /// Create a new event with the given style
+    /// </summary>
+    /// <returns></returns>
+    public static AssEvent Make(AssStyle style)
+    {
+        return new AssEvent
+        {
+            Comment = false,
+            Start = AssTime.Make("0:00:00.00"),
+            End = AssTime.Make("0:00:00.00"),
+            Actor = "",
+            Effect = "",
+            Layer = 0,
+            MarginL = 0,
+            MarginR = 0,
+            MarginV = 0,
+            Style = style.Name,
+            Text = ""
+        };
+    }
     
     public override string ToString() =>
         $"{(Comment ? "Comment" : "Dialogue")}: {Layer},{Start},{End},{Style},{Actor},{MarginL},{MarginR},{MarginV},{Effect},{Text}";

@@ -17,6 +17,8 @@ public class EventGridItem : ViewModelBase
     private int _layer;
     private AssTime? _start;
     private AssTime? _end;
+    private string? _startT;
+    private string? _endT;
     private string? _style;
     private string? _actor;
     private int _marL;
@@ -28,7 +30,21 @@ public class EventGridItem : ViewModelBase
     public EventGridItem(uint index)
     {
         this._index = index;
-        this._event = new AssEvent();
+        this._event = AssEvent.Make(AssStyle.Make("Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1"));
+        // TODO: Don't do this ^
+        this._comment = _event.Comment;
+        this._layer = _event.Layer;
+        this._start = _event.Start;
+        this._end = _event.End;
+        this._startT = this._start!.ToString();
+        this._endT = this._end!.ToString();
+        this._style = _event.Style;
+        this._actor = _event.Actor;
+        this._marL = _event.MarginL;
+        this._marR = _event.MarginR;
+        this._marV = _event.MarginV;
+        this._effect = _event.Effect;
+        this._text = _event.Text;
     }
     
     public EventGridItem(uint index, AssEvent line) {
@@ -71,6 +87,17 @@ public class EventGridItem : ViewModelBase
         {
             this.RaiseAndSetIfChanged(ref _start, value);
             _event.Start = _start;
+            _startT = _start!.ToString();
+        }
+    }
+    
+    public string? StartText
+    {
+        get => _startT;
+        set
+        {
+            this.RaiseAndSetIfChanged(ref _startT, value);
+            _event.Start = AssTime.Make(value);
         }
     }
 
@@ -81,6 +108,17 @@ public class EventGridItem : ViewModelBase
         {
             this.RaiseAndSetIfChanged(ref _end, value);
             _event.End = _end;
+            _endT = _end!.ToString();
+        }
+    }
+    
+    public string? EndText
+    {
+        get => _endT;
+        set
+        {
+            this.RaiseAndSetIfChanged(ref _endT, value);
+            _event.End = AssTime.Make(value);
         }
     }
 

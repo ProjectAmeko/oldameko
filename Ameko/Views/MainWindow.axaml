@@ -29,7 +29,7 @@
         </ExperimentalAcrylicBorder>
         
         <DockPanel Margin="40">
-            <views:EventGrid DataContext="{Binding EventGridVM}" />
+            <views:EventGrid DataContext="{Binding EventGroupVm}" />
         </DockPanel>
         
     </Panel>

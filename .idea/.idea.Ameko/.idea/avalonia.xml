@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Ameko/App.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/AlbumView.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/EventArea.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/EventGrid.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/EventGroup.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/EventTextArea.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/MainWindow.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/MusicStoreView.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/MusicStoreWindow.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/SubtitleGrid.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/icons.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="MusicStore/Views/AlbumView.axaml" value="MusicStore/MusicStore.csproj" />
+        <entry key="MusicStore/Views/MainWindow.axaml" value="MusicStore/MusicStore.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

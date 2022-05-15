@@ -4,14 +4,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Ameko.Views.EventGrid">
+             x:Class="Ameko.Views.EventGrid"
+             xmlns:views="clr-namespace:Ameko.Views">
     
     <Design.DataContext>
-        <vm:EventGridViewModel/>
+        <vm:EventGroupViewModel/>
     </Design.DataContext>
     
     <DockPanel>
-        <TextBox DockPanel.Dock="Top" Text="{Binding CurrentEvent.Text, FallbackValue=''}" Height="80"></TextBox>
+        <views:EventTextArea DockPanel.Dock="Top" />
         <DataGrid Name="SubGrid"
                   DockPanel.Dock="Bottom"
                   CanUserResizeColumns="True"
@@ -23,8 +24,8 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="#" Binding="{Binding Index}" Width="0.25*" />
                 <DataGridTextColumn Header="Layer" Binding="{Binding Layer}" Width="0.35*" />
-                <DataGridTextColumn Header="Start" Binding="{Binding Start}" Width="0.5*" />
-                <DataGridTextColumn Header="End" Binding="{Binding End}" Width="0.5*" />
+                <DataGridTextColumn Header="Start" Binding="{Binding StartText}" Width="0.5*" />
+                <DataGridTextColumn Header="End" Binding="{Binding EndText}" Width="0.5*" />
                 <DataGridTextColumn Header="Style" Binding="{Binding Style}" Width="0.5*" />
                 <DataGridTextColumn Header="Actor" Binding="{Binding Actor}" Width="0.5*" />
                 <DataGridTextColumn Header="Effect" Binding="{Binding Effect}" Width="0.5*" />
