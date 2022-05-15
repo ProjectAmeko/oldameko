@@ -29,14 +29,15 @@
         </ExperimentalAcrylicBorder>
         
         <DockPanel Margin="40">
-            <TextBox DockPanel.Dock="Top" Text="{Binding CurrentLine}" Height="80"></TextBox>
+            <TextBox DockPanel.Dock="Top" Text="{Binding CurrentLine, FallbackValue=''}" Height="80"></TextBox>
             <DataGrid DockPanel.Dock="Bottom" 
                       Items="{Binding Events}"
                       CanUserResizeColumns="True"
                       CanUserReorderColumns="False"
                       IsReadOnly="True"
                       SelectionMode="Extended"
-                      FontSize="12">
+                      FontSize="12"
+                      SelectedItem="{Binding CurrentEvent}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Layer" Binding="{Binding Layer}" Width="0.25*" />
                     <DataGridTextColumn Header="Start" Binding="{Binding Start}" Width="0.5*" />

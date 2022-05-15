@@ -16,6 +16,7 @@ namespace Ameko.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         private string? _currentLine;
+        private AssEvent? _currentEvent;
         
         public ObservableCollection<AssEvent> Events { get; }
 
@@ -27,7 +28,21 @@ namespace Ameko.ViewModels
         public string? CurrentLine
         {
             get => _currentLine;
-            set => this.RaiseAndSetIfChanged(ref _currentLine, value);
+            set
+            {
+                this.RaiseAndSetIfChanged(ref _currentLine, value);
+                _currentEvent!.Text = value;
+            }
+        }
+
+        public AssEvent? CurrentEvent
+        {
+            get => _currentEvent;
+            set
+            {
+                this.RaiseAndSetIfChanged(ref _currentEvent, value);
+                CurrentLine = value?.Text;
+            }
         }
 
         private IEnumerable<AssEvent> GenerateTestEvents()
