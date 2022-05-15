@@ -35,5 +35,9 @@
         <DependentUpon>EventTextArea.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Update="Views\MenuBar.axaml.cs">
+        <DependentUpon>MenuBar.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>

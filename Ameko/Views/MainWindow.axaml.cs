@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Reactive;
 using System.Threading.Tasks;
 using Ameko.ViewModels;
 using Avalonia.Controls;
@@ -12,5 +14,6 @@ namespace Ameko.Views
         {
             InitializeComponent();
         }
+
     }
 }

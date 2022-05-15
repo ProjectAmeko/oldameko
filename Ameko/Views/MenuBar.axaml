@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Ameko.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Ameko.Views.MenuBar"
+             xmlns:views="clr-namespace:Ameko.Views">
+    
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <Menu>
+        <MenuItem Header="File">
+            <MenuItem Header="New" />
+            <MenuItem Header="Open..." />
+            <MenuItem Header="Save" />
+            <MenuItem Header="Save As..." />
+            <Separator />
+            <MenuItem Header="Quit" />
+        </MenuItem>
+        <MenuItem Header="Edit">
+            <MenuItem Header="Undo" />
+            <MenuItem Header="Redo" />
+            <MenuItem Header="Cut" />
+            <MenuItem Header="Copy" />
+            <MenuItem Header="Paste" />
+            <MenuItem Header="Paste Over..." />
+        </MenuItem>
+        <MenuItem Header="Subtitle">
+            <MenuItem Header="Styles Manager..." />
+        </MenuItem>
+    </Menu>
+    
+</UserControl>

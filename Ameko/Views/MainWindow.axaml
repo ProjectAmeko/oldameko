@@ -29,7 +29,8 @@
         </ExperimentalAcrylicBorder>
         
         <DockPanel Margin="40">
-            <views:EventGrid DataContext="{Binding EventGroupVm}" />
+            <views:MenuBar DockPanel.Dock="Top" />
+            <views:EventGrid DockPanel.Dock="Bottom" DataContext="{Binding EventGroupVm}" />
         </DockPanel>
         
     </Panel>

@@ -10,6 +10,7 @@
         <entry key="Ameko/Views/EventGroup.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/EventTextArea.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/MainWindow.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/MenuBar.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/MusicStoreView.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/MusicStoreWindow.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/SubtitleGrid.axaml" value="Ameko/Ameko.csproj" />
