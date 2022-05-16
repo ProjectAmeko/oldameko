@@ -69,12 +69,12 @@ public static class AssParser
     }
     private static void ParseMetadataLine(string line, AssFile file)
     {
-        var pair = line.Split(": ");
+        var pair = line.Split(":");
         if (pair.Length >= 2)
             file.ScriptMetadata.Add
             (
                 pair[0].Trim(),
-                pair[1].Trim()
+                String.Join(":",pair,1,pair.Length-1).Trim()
             );
         // Not a key:value pair
         else return;
