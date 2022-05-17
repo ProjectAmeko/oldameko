@@ -1,0 +1,3 @@
+[submodule "External/AssCS"]
+	path = External/AssCS
+	url = https://github.com/ProjectAmeko/AssCS.git
