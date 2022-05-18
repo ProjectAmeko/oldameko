@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\External\AssCS\AssCS\AssCS.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AVPlugins\FFMS\" />
+  </ItemGroup>
+
+</Project>
