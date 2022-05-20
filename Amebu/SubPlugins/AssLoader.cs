@@ -1,6 +1,7 @@
 ﻿using Ameko.AssCS;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Amebu.SubPlugins
@@ -9,19 +10,25 @@ namespace Amebu.SubPlugins
     {
         public string[] FileExtensions => new string[] {".ass","*"};
 
-        public AssFile? GetAssFile()
-        {
-            throw new NotImplementedException();
-        }
 
         public string GetErrorMessage(int errCode)
         {
             throw new NotImplementedException();
         }
 
-        public int LoadFile(string path, int index = -1)
+        public SubtitleResponse LoadFile(string path, int index = -1)
         {
-            throw new NotImplementedException();
+            SubtitleResponse subtitleResponse = new SubtitleResponse();
+            if (File.Exists(path))
+            {
+                subtitleResponse.AssFile = AssParser.LoadAndParse(path);
+                subtitleResponse.Status = "OK";
+            }
+            else
+            {
+                subtitleResponse.Status = "File does not exist.";
+            }
+            return subtitleResponse;
         }
     }
 }

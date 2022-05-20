@@ -5,6 +5,11 @@ using System.Text;
 
 namespace Amebu.SubPlugins
 {
+    public struct SubtitleResponse
+    {
+        public string Status { get; set; }
+        public AssFile? AssFile { get; set; }
+    }
     public interface ISubLoader
     {
         /// <summary>
@@ -13,12 +18,7 @@ namespace Amebu.SubPlugins
         /// <param name="path">A *hopefully* valid file</param>
         /// <param name="index">Index to determine which ass file to load.</param>
         /// <returns>An integer, indicating if the file has been loaded or not.</returns>
-        public int LoadFile(string path, int index = -1);
-        /// <summary>
-        /// Returns the AssFile.
-        /// </summary>
-        /// <returns>Returns a AssFile, can be null.</returns>
-        public AssFile? GetAssFile();
+        public SubtitleResponse LoadFile(string path, int index = -1);
         public string[] FileExtensions { get; }
         /// <summary>
         /// Gets the error code returned by "LoadFile"
