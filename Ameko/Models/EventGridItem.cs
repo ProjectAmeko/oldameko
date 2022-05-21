@@ -30,8 +30,7 @@ public class EventGridItem : ViewModelBase
     public EventGridItem(uint index)
     {
         this._index = index;
-        this._event = AssEvent.Make(AssStyle.Make("Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1"));
-        // TODO: Don't do this ^
+        this._event = AssEvent.Default();
         this._comment = _event.Comment;
         this._layer = _event.Layer;
         this._start = _event.Start;

@@ -31,6 +31,11 @@ namespace Amebu.AVPlugins.L_Smash
             return 0;
         }
 
+        public IFrame GetFrame(int index)
+        {
+            throw new NotImplementedException();
+        }
+
         public int SetColorMatrix(string matrix)
         {
             throw new NotImplementedException();

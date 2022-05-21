@@ -30,7 +30,11 @@
         
         <DockPanel Margin="40">
             <views:MenuBar DockPanel.Dock="Top" />
-            <views:EventGrid DockPanel.Dock="Bottom" DataContext="{Binding EventGroupVm}" />
+            <TabControl DockPanel.Dock="Bottom">
+                <TabItem Header="Untitled">
+                    <views:EventGrid DataContext="{Binding EventGroupVm}" />
+                </TabItem>
+            </TabControl>
         </DockPanel>
         
     </Panel>

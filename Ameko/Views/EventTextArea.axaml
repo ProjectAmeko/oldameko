@@ -1,8 +1,11 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:Ameko.ViewModels"
+             xmlns:ae="using:AvaloniaEdit"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:avaloniaEdit="https://github.com/avaloniaui/avaloniaedit"
+             xmlns:document="clr-namespace:AvaloniaEdit.Document;assembly=AvaloniaEdit"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Ameko.Views.EventTextArea">
     
@@ -30,8 +33,10 @@
                     <TextBox Text="{Binding CurrentEvent.Actor, FallbackValue=''}" Watermark="Actor" Width="200" />
                     <TextBox Text="{Binding CurrentEvent.Effect, FallbackValue=''}" Watermark="Effect" Width="200" Margin="5 0" />
                 </StackPanel>
-            
-                <TextBox DockPanel.Dock="Bottom" Text="{Binding CurrentEvent.Text, FallbackValue=''}" TextWrapping="Wrap" Height="80"></TextBox>
+                
+                <Border CornerRadius="5" BorderBrush="Gray" BorderThickness="1.5">
+                    <ae:TextEditor Name="Editor" DockPanel.Dock="Bottom" Height="60" FontSize="16" />
+                </Border>
             </DockPanel>
         </Border>
     </Panel>
