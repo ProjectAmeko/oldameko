@@ -4,8 +4,6 @@
              xmlns:ae="using:AvaloniaEdit"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:avaloniaEdit="https://github.com/avaloniaui/avaloniaedit"
-             xmlns:document="clr-namespace:AvaloniaEdit.Document;assembly=AvaloniaEdit"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Ameko.Views.EventTextArea">
     
@@ -35,7 +33,7 @@
                 </StackPanel>
                 
                 <Border CornerRadius="5" BorderBrush="Gray" BorderThickness="1.5">
-                    <ae:TextEditor Name="Editor" DockPanel.Dock="Bottom" Height="60" FontSize="16" />
+                    <ae:TextEditor Name="Editor" Document="{Binding CurrentEvent.Document}" DockPanel.Dock="Bottom" Height="60" FontSize="16" />
                 </Border>
             </DockPanel>
         </Border>

@@ -12,15 +12,9 @@ namespace Ameko.Views;
 
 public partial class EventTextArea : UserControl
 {
-
-    private readonly TextEditor _textEditor;
     public EventTextArea()
     {
         InitializeComponent();
-
-        _textEditor = this.FindControl<TextEditor>("Editor");
-        _textEditor.Document = new TextDocument();
-        
     }
 
     private void InitializeComponent()

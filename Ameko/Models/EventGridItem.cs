@@ -1,5 +1,7 @@
+using System;
 using Ameko.AssCS;
 using Ameko.ViewModels;
+using AvaloniaEdit.Document;
 using ReactiveUI;
 
 namespace Ameko.Models;
@@ -11,7 +13,8 @@ namespace Ameko.Models;
 public class EventGridItem : ViewModelBase
 {
     private uint _index;
-    private AssEvent _event;
+    private readonly AssEvent _event;
+    private TextDocument _document;
 
     private bool _comment;
     private int _layer;
@@ -44,11 +47,15 @@ public class EventGridItem : ViewModelBase
         this._marV = _event.MarginV;
         this._effect = _event.Effect;
         this._text = _event.Text;
+        this._document = new TextDocument(_event.Text);
+        this._document.TextChanged += this.OnDocumentTextChanged;
     }
     
     public EventGridItem(uint index, AssEvent line) {
         this._index = index;
         this._event = line;
+        this._document = new TextDocument();
+        this._document.TextChanged += this.OnDocumentTextChanged;
     }
     
     #region Getters/Setters
@@ -188,8 +195,21 @@ public class EventGridItem : ViewModelBase
         {
             this.RaiseAndSetIfChanged(ref _text, value);
             _event.Text = _text;
+            if (!_document.Text.Equals(value))
+                _document.Text = value;
         }
     }
 
+    public TextDocument Document
+    {
+        get => _document;
+        set => this.RaiseAndSetIfChanged(ref _document, value);
+    }
+
     #endregion Getters/Setters
+
+    private void OnDocumentTextChanged(object? sender, EventArgs e)
+    {
+        Text = _document.Text;
+    }
 }
