@@ -10,6 +10,7 @@
     <ItemGroup>
         <Folder Include="Models\" />
         <AvaloniaResource Include="Assets\**" />
+        <Folder Include="ViewModels\Components" />
         <None Remove=".gitignore" />
     </ItemGroup>
     <ItemGroup>
@@ -25,25 +26,24 @@
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.13" />
         <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.13" />
-        <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.13" />
-        <PackageReference Include="AvaloniaEdit.TextMate" Version="0.10.12.2" />
-        <PackageReference Include="TextMateSharp.Grammars" Version="1.0.35" />
         <PackageReference Include="XamlNameReferenceGenerator" Version="1.3.4" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Amebu\Amebu.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-      <Compile Update="Views\EventTextArea.axaml.cs">
-        <DependentUpon>EventTextArea.axaml</DependentUpon>
+      <Compile Update="Views\Layout\SubtitleEditView.axaml.cs">
+        <DependentUpon>SubtitleEditView.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="Views\MenuBar.axaml.cs">
-        <DependentUpon>MenuBar.axaml</DependentUpon>
+      <Compile Update="Views\Layout\SubtitleGridView.axaml.cs">
+        <DependentUpon>SubtitleGridView.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="Views\MainWindow.axaml.cs">
-        <DependentUpon>MainWindow.axaml</DependentUpon>
+      <Compile Update="Views\Layout\VideoView.axaml.cs">
+        <DependentUpon>VideoView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\Layout\AudioView.axaml.cs">
+        <DependentUpon>AudioView.axaml</DependentUpon>
+        <SubType>Code</SubType>
       </Compile>
     </ItemGroup>
 </Project>

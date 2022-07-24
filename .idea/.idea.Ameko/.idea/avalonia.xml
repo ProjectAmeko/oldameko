@@ -5,15 +5,26 @@
       <map>
         <entry key="Ameko/App.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/AlbumView.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/AudioView.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Components/MenuBar.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Components/TabDocument.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Document.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/EventArea.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/EventGrid.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/EventGroup.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/EventTextArea.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Layout/AudioView.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Layout/SubtitleEditView.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Layout/SubtitleGridView.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Layout/VideoView.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/MainWindow.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/MenuBar.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/MusicStoreView.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/MusicStoreWindow.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/SubtitleEditView.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/SubtitleGrid.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/SubtitleGridView.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/VideoView.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/icons.axaml" value="Ameko/Ameko.csproj" />
         <entry key="MusicStore/Views/AlbumView.axaml" value="MusicStore/MusicStore.csproj" />
         <entry key="MusicStore/Views/MainWindow.axaml" value="MusicStore/MusicStore.csproj" />

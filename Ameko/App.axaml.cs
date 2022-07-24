@@ -1,8 +1,8 @@
-using Ameko.ViewModels;
-using Ameko.Views;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Ameko.ViewModels;
+using Ameko.Views;
 
 namespace Ameko
 {

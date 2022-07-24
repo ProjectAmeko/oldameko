@@ -3,40 +3,30 @@
         xmlns:vm="using:Ameko.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:views="clr-namespace:Ameko.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Ameko.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="Ameko"
-        Background="Transparent"
-        TransparencyLevelHint="AcrylicBlur"
-        ExtendClientAreaToDecorationsHint="True"
-        WindowStartupLocation="CenterScreen">
+        xmlns:layout="clr-namespace:Ameko.Views.Layout"
+        xmlns:components="clr-namespace:Ameko.Views.Components">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
+
+
+    <DockPanel>
+        <components:MenuBar DockPanel.Dock="Top" />
+        <Grid RowDefinitions="1*,1*" ColumnDefinitions="1*,1*" DockPanel.Dock="Bottom">
+            <layout:VideoView Grid.Row="0" Grid.Column="0" />
+            <Grid RowDefinitions="1*,1.5*" ColumnDefinitions="*" Grid.Row="0" Grid.Column="1">
+                <layout:AudioView Grid.Row="0" Grid.Column="0" />
+                <layout:SubtitleEditView Grid.Row="1" Grid.Column="0" />
+            </Grid>
+            <layout:SubtitleGridView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+        </Grid>
+    </DockPanel>
+
     
-    <Panel>
-        <ExperimentalAcrylicBorder IsHitTestVisible="False">
-            <ExperimentalAcrylicBorder.Material>
-                <ExperimentalAcrylicMaterial
-                    BackgroundSource="Digger"
-                    TintColor="Black"
-                    TintOpacity="1"
-                    MaterialOpacity="0.65" />
-            </ExperimentalAcrylicBorder.Material>
-        </ExperimentalAcrylicBorder>
-        
-        <DockPanel Margin="40">
-            <views:MenuBar DockPanel.Dock="Top" />
-            <TabControl DockPanel.Dock="Bottom">
-                <TabItem Header="Untitled">
-                    <views:EventGrid DataContext="{Binding EventGroupVm}" />
-                </TabItem>
-            </TabControl>
-        </DockPanel>
-        
-    </Panel>
 
 </Window>

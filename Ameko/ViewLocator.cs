@@ -1,7 +1,7 @@
 using System;
-using Ameko.ViewModels;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
+using Ameko.ViewModels;
 
 namespace Ameko
 {

@@ -1,13 +1,8 @@
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Reactive;
-using Ameko.Models;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using ReactiveUI;
 
-namespace Ameko.Views;
+namespace Ameko.Views.Components;
 
 public partial class MenuBar : UserControl
 {

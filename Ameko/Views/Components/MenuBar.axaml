@@ -1,16 +1,9 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:vm="using:Ameko.ViewModels"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Ameko.Views.MenuBar"
-             xmlns:views="clr-namespace:Ameko.Views">
-    
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-    
+             x:Class="Ameko.Views.Components.MenuBar">
     <Menu>
         <MenuItem Header="File">
             <MenuItem Header="New" />
@@ -32,5 +25,4 @@
             <MenuItem Header="Styles Manager..." />
         </MenuItem>
     </Menu>
-    
 </UserControl>
