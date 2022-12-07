@@ -1,0 +1,28 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             d:DataContext="Ameko.ViewModels.SubtitleGridViewModel"
+             x:Class="Ameko.Views.Components.EventGrid"
+             >
+    <DataGrid Name="SubGrid"
+              CanUserResizeColumns="True"
+              CanUserReorderColumns="True"
+              IsReadOnly="True"
+              SelectionMode="Extended"
+              FontSize="11"
+              Items="{Binding Events}"
+    >
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="#" Width="0.25*" />
+            <DataGridTextColumn Header="Layer" Width="0.35*" Binding="{Binding Layer}" />
+            <DataGridTextColumn Header="Start" Width="0.5*" Binding="{Binding Start.AsStr}" />
+            <DataGridTextColumn Header="End" Width="0.5*" Binding="{Binding End.AsStr}" />
+            <DataGridTextColumn Header="Style" Width="0.5*" Binding="{Binding Style}" />
+            <DataGridTextColumn Header="Actor" Width="0.5*" Binding="{Binding Actor}" />
+            <DataGridTextColumn Header="Effect" Width="0.5*" Binding="{Binding Effect}" />
+            <DataGridTextColumn Header="Text" Width="4*" Binding="{Binding Text}" />
+        </DataGrid.Columns>
+    </DataGrid>
+</UserControl>

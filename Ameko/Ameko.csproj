@@ -10,7 +10,6 @@
     <ItemGroup>
         <Folder Include="Models\" />
         <AvaloniaResource Include="Assets\**" />
-        <Folder Include="ViewModels\Components" />
         <None Remove=".gitignore" />
     </ItemGroup>
     <ItemGroup>
@@ -45,5 +44,8 @@
         <DependentUpon>AudioView.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\External\AssCS\AssCS\AssCS.csproj" />
     </ItemGroup>
 </Project>

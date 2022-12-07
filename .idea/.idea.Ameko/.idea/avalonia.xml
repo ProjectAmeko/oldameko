@@ -6,7 +6,9 @@
         <entry key="Ameko/App.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/AlbumView.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/AudioView.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Components/EventGrid.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/Components/MenuBar.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Components/SubtitleGrid.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/Components/TabDocument.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/Document.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/EventArea.axaml" value="Ameko/Ameko.csproj" />
@@ -16,6 +18,8 @@
         <entry key="Ameko/Views/Layout/AudioView.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/Layout/SubtitleEditView.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/Layout/SubtitleGridView.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Layout/Tab.axaml" value="Ameko/Ameko.csproj" />
+        <entry key="Ameko/Views/Layout/TabContent.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/Layout/VideoView.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/MainWindow.axaml" value="Ameko/Ameko.csproj" />
         <entry key="Ameko/Views/MenuBar.axaml" value="Ameko/Ameko.csproj" />

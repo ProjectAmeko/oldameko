@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Ameko.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Ameko.Views.Layout.TabContent"
+             xmlns:layout="clr-namespace:Ameko.Views.Layout"
+             xmlns:components="clr-namespace:Ameko.Views.Components">
+    <Grid RowDefinitions="1*,1*" ColumnDefinitions="1*,1*" DockPanel.Dock="Bottom">
+        <layout:VideoView Grid.Row="0" Grid.Column="0" />
+        <Grid RowDefinitions="1*,1.5*" ColumnDefinitions="*" Grid.Row="0" Grid.Column="1">
+            <layout:AudioView Grid.Row="0" Grid.Column="0" />
+            <layout:SubtitleEditView Grid.Row="1" Grid.Column="0" />
+        </Grid>
+        <layout:SubtitleGridView DataContext="{Binding SubtitleGrid}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+    </Grid>
+</UserControl>

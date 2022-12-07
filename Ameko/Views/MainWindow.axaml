@@ -13,18 +13,28 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
+    
+    <Window.Styles>
+        <Style Selector="TabControl WrapPanel">
+            <Setter Property="Height" Value="12" />
+        </Style>
+        <Style Selector="TabItem">
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+        <Style Selector="TabItem:selected">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+    </Window.Styles>
 
 
     <DockPanel>
         <components:MenuBar DockPanel.Dock="Top" />
-        <Grid RowDefinitions="1*,1*" ColumnDefinitions="1*,1*" DockPanel.Dock="Bottom">
-            <layout:VideoView Grid.Row="0" Grid.Column="0" />
-            <Grid RowDefinitions="1*,1.5*" ColumnDefinitions="*" Grid.Row="0" Grid.Column="1">
-                <layout:AudioView Grid.Row="0" Grid.Column="0" />
-                <layout:SubtitleEditView Grid.Row="1" Grid.Column="0" />
-            </Grid>
-            <layout:SubtitleGridView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
-        </Grid>
+        
+        <TabControl DockPanel.Dock="Bottom">
+            <TabItem Header="Untitled">
+                <layout:TabContent DataContext="{Binding TabContent}" />
+            </TabItem>
+        </TabControl>
     </DockPanel>
 
     

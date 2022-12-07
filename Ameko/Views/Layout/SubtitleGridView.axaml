@@ -2,11 +2,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:components="clr-namespace:Ameko.Views.Components"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             d:DataContext="Ameko.ViewModels.SubtitleGridViewModel"
              x:Class="Ameko.Views.Layout.SubtitleGridView">
-    <Grid RowDefinitions="*" ColumnDefinitions="*">
-        <Panel Grid.Row="0" Grid.Column="0" Background="pink">
-            <TextBlock>Subtitles</TextBlock>
-        </Panel>
-    </Grid>
+    <components:EventGrid />
 </UserControl>
